@@ -3,24 +3,16 @@ import constants from "./constants";
 export const setIconBasedOnType = (type) => {
   let icon;
   if (type === constants.cloudy) {
-    icon = (
-      <span>
-        <i className="fas fa-cloud"></i>
-      </span>
-    );
+    icon = "cloud";
   } else if (type === constants.sunny) {
-    icon = (
-      <span>
-        <i className="fas fa-sun"></i>
-      </span>
-    );
+    icon = "sun";
   } else {
-    icon = (
-      <span>
-        <i className="fas fa-cloud-rain"></i>
-      </span>
-    );
+    icon = "cloud-rain";
   }
 
-  return icon;
+  return (
+    <span>
+      <i className={`fas fa-${icon}`}></i>
+    </span>
+  );
 };

@@ -14,6 +14,7 @@ body h1 {
   display: flex;
   justify-content: space-between;
   padding: 20px 20px;
+  text-align: center;
 }
 .innerBox {
   background-color: transparent;
@@ -33,7 +34,7 @@ button {
   color: #fff !important;
   text-transform: uppercase;
   background: #60a3bc;
-  padding: 10px 10px;
+  padding: 12px 15px;
   border-radius: 20px;
   border: none;
 }
