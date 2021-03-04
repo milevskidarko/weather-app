@@ -24,6 +24,7 @@ body h1 {
   cursor: pointer;
   padding: 45px 45px;
   margin-right: 50px;
+  font-weight: bold;
 }
 .chosenBox {
   text-align: center;

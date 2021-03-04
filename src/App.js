@@ -26,6 +26,10 @@ function App() {
     setWeatherData(clonedWD);
   };
 
+  const setToDefault = () => {
+    setWeatherData(weatherdata);
+  };
+
   return (
     <div className="bgImage" style={{ backgroundImage: "url(weather.jpg)" }}>
       {!activeDay ? (
@@ -37,6 +41,7 @@ function App() {
           setActiveDay={setActiveDay}
           temp={temp}
           convertUnit={convertUnit}
+          setDefaults={setToDefault}
         />
       )}
     </div>

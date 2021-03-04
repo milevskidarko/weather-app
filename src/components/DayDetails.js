@@ -1,14 +1,15 @@
 import constants from "../constants";
-import { setIconBasedOnType } from "../utils";
-
-const getTempUnitSign = (tempUnit) => {
-  return tempUnit === "C" ? "°C" : "°F";
-};
+import { setIconBasedOnType, getTempUnitSign } from "../utils";
 
 const DayDetails = (props) => {
+  const handleBackClick = () => {
+    props.setDefaults();
+    props.setActiveDay(false);
+  };
+
   return (
     <div>
-      <button onClick={() => props.setActiveDay(false)}>Back</button>
+      <button onClick={() => handleBackClick()}>Back</button>
       <div className="chosenBox">
         <p>{props.data.windDirection}</p>
         <p>{props.data.day}</p>

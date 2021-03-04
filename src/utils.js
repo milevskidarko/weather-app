@@ -16,3 +16,5 @@ export const setIconBasedOnType = (type) => {
     </span>
   );
 };
+
+export const getTempUnitSign = (tempUnit) => (tempUnit === "C" ? "°C" : "°F");
