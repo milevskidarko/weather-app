@@ -1,21 +1,17 @@
-import React, { useState, useEffect } from "react";
-import weatherdata from "../data.json";
+import React, { useState } from "react";
 
-const Day = () => {
-  const [days, setDays] = useState([]);
-  console.log(days);
-
-  useEffect(() => {
-    setDays(weatherdata.days);
-  }, []);
-
+const Day = (props) => {
   return (
     <div className="box">
-      {days &&
-        days.map((el, index) => (
-          <div key={index}>
+      {props.data.days &&
+        props.data.days.map((el, index) => (
+          <div
+            key={index}
+            onClick={() => props.setActiveDay(el)}
+            className="innerBox"
+          >
             {el.day}
-            <p>{el.temp} °C</p>
+            <p>{el.temp}°C</p>
           </div>
         ))}
     </div>
