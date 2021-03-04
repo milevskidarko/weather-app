@@ -1,4 +1,5 @@
-import React, { useState } from "react";
+import React from "react";
+import { setIconBasedOnType } from "../utils";
 
 const Day = (props) => {
   return (
@@ -12,6 +13,7 @@ const Day = (props) => {
           >
             {el.day}
             <p>{el.temp}°C</p>
+            {setIconBasedOnType(el.type)}
           </div>
         ))}
     </div>
